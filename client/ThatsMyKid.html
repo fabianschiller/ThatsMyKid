@@ -1,0 +1,85 @@
+<head>
+  <title>ThatsMyKid</title>
+    <script type="text/javascript" src="jquery-1.9.1.js"></script>
+</head>
+
+<body>
+  {{> photobox}}
+  {{> missingfeaturebox}}
+  {{> banner}}
+  {{> login}}
+  {{> bodyInhalt}}
+  {{> footer}}
+</body>
+
+<template name="photobox">
+    <div id="photo_viewer">
+        <div class="transparent_layer"></div>
+        <div id="photo_box">
+        	<img id="photo_box_img" src="walking.jpg" alt="picture one" />
+        	<div id="photo_comment">This is a comment</div>
+        </div>
+    </div>
+</template>
+
+<template name="missingfeaturebox">
+    <div id="missingfeature_viewer">
+        <div class="transparent_layer"></div>
+        <div id="missingfeature_box">{{> missingFeature}}</div>
+    </div>
+</template>
+
+<template name="banner">
+	<div id="banner">
+		<div>
+			<img style="padding-right: 10px;" id="logo" src="logo.jpg" alt="picture one" />
+		</div>
+  		<div>ThatsMyKid</div>
+        {{#if currentUser}}
+        {{else}}
+        <img style="position:absolute; top:5px; left:200px; width:300px;" src="img/sicher-einfach-etc.png"/>
+        {{/if}}
+  	</div>
+</template>
+
+<template name="login" >
+	<div id="login-button" class="start">
+		{{> loginButton}}
+	</div>
+</template>
+
+
+<template name="bodyInhalt">
+	{{#if currentUser}}
+		{{> userBereich}}
+	{{else}}
+		{{#if loggingIn}}
+		<!-- do nothing or show a smilie -->
+		{{else}}
+			<div class="gallery">
+				<div id="walking">
+					<img class="status-thumb" src="sitting1.jpg" alt="picture one" />
+		            <img style="position:absolute; bottom:0px; left:300px; width:300px; z-index:50;" src="img/status-bubble.png"/>
+		            <img style="position:absolute; bottom:70px; right:210px; width:200px; z-index:50;" src="img/special_events.png"/>
+				</div>
+				<div>{{> eventsList}}</div>
+			</div>
+		{{/if}}
+	{{/if}}
+</template>
+
+
+<template name="footer">
+<div id="footer">
+		all pictures are under public or creative commons licence via <a
+		href="http://commons.wikimedia.org/">Wikimedia</a> - mouse over to see annotation | <a href="impressum.html">Impressum</a><br />
+	<div>
+			<div style="position:relative;top:0px;" class="g-follow" data-annotation="bubble" data-height="20"
+				data-href="https://plus.google.com/105967116019649965198"
+				data-rel="publisher"></div>
+			<div style="position:relative;top:-6px;" class="fb-follow"
+				data-href="https://www.facebook.com/pages/Thatsmykid/1375038446050243"
+				data-layout="button_count" data-show-faces="false"></div>
+	</div>
+</div>
+</template>
