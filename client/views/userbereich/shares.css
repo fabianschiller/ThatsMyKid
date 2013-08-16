@@ -1,0 +1,32 @@
+#shares-dialog {
+    z-index: 50;
+    position: fixed;
+    left: 43%;
+    top: 45px;
+    width: 220px;
+    background-color: #ffffff;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-top-color: white;
+    visibility: hidden;
+}
+
+#shares-button {
+    position: absolute;
+    top: 15px;
+    left: 45%;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#new-share {
+    width: 160px;
+}
+
+.shares-entry {
+/*    position: relative;
+    float: left;*/
+    padding: 3px;
+}
+

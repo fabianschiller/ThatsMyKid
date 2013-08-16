@@ -1,11 +1,13 @@
 <head>
   <title>ThatsMyKid</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     <script type="text/javascript" src="jquery-1.9.1.js"></script>
 </head>
 
 <body>
   {{> photobox}}
   {{> banner}}
+  {{> shares}}
   {{> login}}
   {{> bodyInhalt}}
   {{> footer}}
@@ -33,6 +35,7 @@
         {{/if}}
   	</div>
 </template>
+
 
 <template name="login" >
 	<div id="login-button" class="start">

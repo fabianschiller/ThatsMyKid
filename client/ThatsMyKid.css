@@ -19,11 +19,10 @@ body {
 }
 
 #logo {
-	float: left;
-	height: 30px;
-	width: 30px;
-}
-
+     float: left;
+     height: 30px;
+     width: 30px;
+ }
 
 #login-button {
 	z-index: 6;
